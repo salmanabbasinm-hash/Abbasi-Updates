@@ -1,6 +1,7 @@
 {
-  "versionCode": 9,
-  "versionName": "3.6",
+  "versionCode": 13,
+  "versionName": "3.9.1",
   "apk": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader.apk",
-  "notes": "پہلی کوشش میں لنک ناکام ہونے کا مسئلہ ٹھیک، ویڈیوز/آڈیوز مین اسکرین پر، ایپ کے بارے میں (About) کا صفحہ شامل۔"
+  "apk32": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader-32bit.apk",
+  "notes": "عہد نامہ شامل، آئی فون ویب ایپ اب تمام سائٹس کے لنک کھول سکتی ہے۔"
 }
