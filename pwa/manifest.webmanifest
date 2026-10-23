@@ -1,0 +1,16 @@
+{
+  "name": "Abbasi All Downloader",
+  "short_name": "Downloader",
+  "description": "Urdu video downloader web app",
+  "lang": "ur",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#5f9484",
+  "theme_color": "#5f9484",
+  "icons": [
+    { "src": "icon-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

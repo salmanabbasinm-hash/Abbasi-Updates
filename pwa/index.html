@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#5f9484">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Abbasi Downloader">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="stylesheet" href="styles.css">
+<title>Abbasi All Downloader</title>
+</head>
+<body>
+<div class="bg"></div>
+
+<section id="splash" class="splash" aria-label="Loading">
+  <div class="splash-card">
+    <img src="icon-180.png" alt="" class="splash-icon">
+    <div class="brand">ABBASI ALL DOWNLOADER</div>
+    <div class="designed">:Designed By</div>
+    <strong>Salman Abbasi Mathra</strong>
+    <div class="phone">03025050236</div>
+    <div class="loader"><span></span></div>
+  </div>
+</section>
+
+<main class="shell">
+  <header class="head">
+    <h1>ویڈیو ڈاؤنلوڈر</h1>
+    <button id="aboutBtn" class="gear" type="button" aria-label="About">ⓘ</button>
+  </header>
+  <p class="subtitle">کسی بھی سائٹ کا لنک پیسٹ کریں، پھر ڈاؤنلوڈ کا بٹن دبائیں۔</p>
+
+  <input id="url" type="url" inputmode="url" autocomplete="off" spellcheck="false" placeholder="یہاں لنک پیسٹ کریں" dir="ltr">
+  <div class="row">
+    <button id="download" class="primary" type="button">ڈاؤنلوڈ کیجیے</button>
+    <button id="paste" class="secondary" type="button">پیسٹ</button>
+  </div>
+  <p id="error" class="error" role="alert" hidden></p>
+
+  <p class="install-hint">iPhone پر Safari کے Share بٹن سے <b>Add to Home Screen</b> منتخب کریں، تو یہ ایپ کی طرح کھلے گی۔</p>
+</main>
+
+<div id="about" class="modal" hidden>
+  <div class="modal-card">
+    <button id="aboutClose" class="close" type="button" aria-label="Close">✕</button>
+    <h2>ایپ کے بارے میں</h2>
+    <h3>تعارف</h3>
+    <p>یہ مفت ویب ایپ ہے جو آئی فون پر ویڈیو یا آڈیو کا لنک ڈاؤنلوڈ سروس تک پہنچاتی ہے۔ کوئی اکاؤنٹ یا ادائیگی نہیں۔</p>
+    <h3>طریقہ استعمال</h3>
+    <p>1. ویڈیو کا لنک کاپی کریں۔<br>2. یہاں "پیسٹ" دبائیں۔<br>3. "ڈاؤنلوڈ کیجیے" دبائیں۔ کھلنے والے صفحے سے ویڈیو یا آڈیو اور کوالٹی چنیں۔</p>
+    <h3>اہم</h3>
+    <p>یوٹیوب کے لنک ایک مددگار ڈاؤنلوڈ سائٹ پر اور باقی سائٹس کے لنک دوسری مددگار سروس پر کھلتے ہیں، جو ہمارے اختیار میں نہیں۔ قطار، دوبارہ شروع اور تیز ڈاؤنلوڈ کی سہولت صرف اینڈرائیڈ ایپ میں ہے۔ فحش اور غیر اخلاقی مواد کی سختی سے ممانعت ہے۔</p>
+    <h3>تیار کنندہ</h3>
+    <p dir="ltr" style="text-align:center">Designed By<br><b>Salman Abbasi Mathra</b><br>03025050236<br>Salman Herbal Clinic Mathra</p>
+  </div>
+</div>
+<div id="terms" class="modal" hidden>
+  <div class="modal-card terms-card">
+    <h2>اہم انتباہ اور عہد نامہ</h2>
+    <p>محترم صارف! السلام علیکم</p>
+    <p>یہ ایپ ہر قسم کے غیر شرعی، فحش اور غیر اخلاقی مواد کے ڈاؤنلوڈ کی سختی سے ممانعت کرتی ہے۔</p>
+    <p>ایپ استعمال کرنے سے پہلے آپ پر لازم ہے کہ آپ پختہ وعدہ کریں کہ:</p>
+    <p>• کسی بھی ناجائز، بے حیائی پر مبنی یا اخلاق سوز مواد کو ڈاؤنلوڈ نہیں کریں گے،<br>• اس ایپ کو صرف جائز، مفید اور باوقار مقاصد کے لیے استعمال کریں گے۔</p>
+    <p>اس عہد کو قبول کیے بغیر ایپ کا استعمال ممکن نہیں۔</p>
+    <button id="termsOk" class="primary full" type="button">میں عہد کرتا ہوں</button>
+    <button id="termsNo" class="secondary full dark" type="button">قبول نہیں</button>
+  </div>
+</div>
+<script src="app.js" defer></script>
+</body>
+</html>
