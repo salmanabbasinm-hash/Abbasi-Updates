@@ -1,4 +1,4 @@
-const CACHE = 'abbasi-downloader-pwa-v3';
+const CACHE = 'abbasi-downloader-pwa-v4';
 const ASSETS = ['./', './index.html', './styles.css', './app.js', './manifest.webmanifest', './icon-180.png', './bg.jpg'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS))); self.skipWaiting(); });
 self.addEventListener('activate', e => e.waitUntil(

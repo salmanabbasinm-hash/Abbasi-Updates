@@ -25,7 +25,11 @@ function convert(raw) {
   try { parsed = new URL(value); } catch { return { error: 'یہ درست لنک نہیں ہے۔' }; }
   const host = parsed.hostname.toLowerCase();
   if (BAD_SITES.some(w => host.includes(w)) || looksAdult(decodeURIComponent(parsed.pathname + ' ' + parsed.search))) {
-    return { error: 'یہ ڈاؤنلوڈ ممنوع ہے۔ اس ایپ میں فحش اور بالغ مواد کی سختی سے اجازت نہیں۔' };
+    return { error: '⚠️ انتباہ\nغیر اخلاقی اور ناجائز مواد ڈاؤنلوڈ کرنا ممنوع ہے۔\nیہ لنک اس ایپ میں قبول نہیں کیا جائے گا۔' };
+  }
+  const MUSIC_HOSTS = ['spotify.com','music.youtube.com','music.apple.com','deezer.com','gaana.com','jiosaavn.com','saavn.com','wynk.in','tidal.com','napster.com','anghami.com','audiomack.com','boomplay.com','bandcamp.com','mixcloud.com','soundcloud.com'];
+  if (MUSIC_HOSTS.some(m => host === m || host.endsWith('.' + m))) {
+    return { error: 'یہ ڈاؤنلوڈ ممنوع ہے۔ اس ایپ میں خالص موسیقی اور گانوں پر مبنی مواد ڈاؤنلوڈ کرنے کی اجازت نہیں۔' };
   }
   if (host === 'youtu.be') {
     const id = parsed.pathname.split('/').filter(Boolean)[0];
