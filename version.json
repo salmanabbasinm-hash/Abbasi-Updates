@@ -1,7 +1,7 @@
 {
-  "versionCode": 16,
-  "versionName": "2.9.3",
+  "versionCode": 17,
+  "versionName": "2.9.4",
   "apk": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader.apk",
   "apk32": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader-32bit.apk",
-  "notes": "ویڈیو کے اندر کی تصویر اور آواز کی جانچ: بالغ مواد اور خالص موسیقی کی خودکار شناخت۔"
+  "notes": "ڈاؤنلوڈ کی رفتار بہتر، پرسنٹیج کا آغاز تیز، اوپر کی پٹی کی درستی۔"
 }
