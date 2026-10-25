@@ -1,7 +1,7 @@
 {
-  "versionCode": 30,
-  "versionName": "3.0.4",
+  "versionCode": 31,
+  "versionName": "3.0.5",
   "apk": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader.apk",
   "apk32": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader-32bit.apk",
-  "notes": "ویڈیو اور آڈیو فہرست نئی شکل میں، ایک ساتھ کئی فائلیں چن کر حذف اور نمبر کے ساتھ نام بدلنا، رنگ ٹون اور الارم، پلیئر میں اسکرین شاٹ و ایکولائزر، موسیقی/فلم/ناچ کی سائٹس کی روک، ہموار پرسنٹیج اور تیز جانچ۔\nگانوں، فلموں اور ناچ کی سائٹوں سے وہ ویڈیو جو خود ممنوع مواد پر مبنی نہ ہو، اب ڈاؤنلوڈ ہو سکتی ہے؛ فحش مواد بدستور بند ہے۔\n\nSHA-256 (64-bit): 7e581d7b654efeee64d16368c01c870ee83ae767f24799f1b68d2459fdf6d0c2\nSHA-256 (32-bit): 5e599ea7a4f8adc4172aeab742b98cd0c7793fcb0b7294efb876d30f668fb2a7\nSigning certificate SHA-256: 8E:AD:25:54:69:3B:D8:29:CB:C7:DB:EA:56:D0:B2:BA:AE:D2:57:66:5F:BE:C8:01:6C:D5:C8:92:A2:B8:A0:3B"
+  "notes": "تیز جانچ اور تیز ابتدائی ونڈو، انٹرنیٹ سگنل نشان (Weak/Normal/High)، گانوں/فلموں کی سائٹوں کی غیر ممنوع ویڈیوز اب ڈاؤنلوڈ ہوں گی، نئے آئیکنز، بند کریں بٹن کی درستی، اور بہت پرانے ورژن کے لیے لازمی اپ ڈیٹ۔\n\nSHA-256 (64-bit): ce69389edf47b0538ce29494028cf6b0250a10970afd33b67f5b71a6e8b1a4e5\nSHA-256 (32-bit): e0871e590e28639ace9e3593ce27fa5f38fb805bb10238f7526c27004b71fdd4\nSigning certificate SHA-256: 8E:AD:25:54:69:3B:D8:29:CB:C7:DB:EA:56:D0:B2:BA:AE:D2:57:66:5F:BE:C8:01:6C:D5:C8:92:A2:B8:A0:3B"
 }
