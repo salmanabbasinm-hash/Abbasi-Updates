@@ -1,7 +1,7 @@
 {
-  "versionCode": 29,
-  "versionName": "3.0.3",
+  "versionCode": 30,
+  "versionName": "3.0.4",
   "apk": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader.apk",
   "apk32": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader-32bit.apk",
-  "notes": "ویڈیو اور آڈیو فہرست بہتر، حروف کی کٹائی ختم، MX جیسا پلیئر (ٹریک، سب ٹائٹل، آواز بڑھانا، حصہ دہرانا)، اور فون کے مطابق گھماؤ۔\n\nSHA-256 (64-bit): 9dce87d17c445d293aad1461cc4814e280df899f55bb46c070012ebf00944ae3\nSHA-256 (32-bit): 0a2f70c44a5deb0b2a7d5c5a9ad6af9dc4cc3154c14193cd140c532e27402134\nSigning certificate SHA-256: 8E:AD:25:54:69:3B:D8:29:CB:C7:DB:EA:56:D0:B2:BA:AE:D2:57:66:5F:BE:C8:01:6C:D5:C8:92:A2:B8:A0:3B"
+  "notes": "ویڈیو اور آڈیو فہرست نئی شکل میں، ایک ساتھ کئی فائلیں چن کر حذف اور نمبر کے ساتھ نام بدلنا، رنگ ٹون اور الارم، پلیئر میں اسکرین شاٹ و ایکولائزر، موسیقی/فلم/ناچ کی سائٹس کی روک، ہموار پرسنٹیج اور تیز جانچ۔\nگانوں، فلموں اور ناچ کی سائٹوں سے وہ ویڈیو جو خود ممنوع مواد پر مبنی نہ ہو، اب ڈاؤنلوڈ ہو سکتی ہے؛ فحش مواد بدستور بند ہے۔\n\nSHA-256 (64-bit): 7e581d7b654efeee64d16368c01c870ee83ae767f24799f1b68d2459fdf6d0c2\nSHA-256 (32-bit): 5e599ea7a4f8adc4172aeab742b98cd0c7793fcb0b7294efb876d30f668fb2a7\nSigning certificate SHA-256: 8E:AD:25:54:69:3B:D8:29:CB:C7:DB:EA:56:D0:B2:BA:AE:D2:57:66:5F:BE:C8:01:6C:D5:C8:92:A2:B8:A0:3B"
 }
