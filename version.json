@@ -1,7 +1,7 @@
 {
-  "versionCode": 28,
-  "versionName": "3.0.2",
+  "versionCode": 29,
+  "versionName": "3.0.3",
   "apk": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader.apk",
   "apk32": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader-32bit.apk",
-  "notes": "نیا پلیئر: ویڈیو پوری سکرین پر اصل شکل میں، نچلی پٹی میں کلپس کی ریل، پنچ زوم، آگے پیچھے سوائپ، چھوٹی کھڑکی، اور خوبصورت آڈیو پلیئر۔\n\nSHA-256 (64-bit): 6c11b76a38b10a256e449ef971406c2c51af79c7ba813340a4855c5f6fa77da4\nSHA-256 (32-bit): b7d2ece478d6576673961c7456732458368e2cdd7a8cd8b156f18150e014e6bb\nSigning certificate SHA-256: 8E:AD:25:54:69:3B:D8:29:CB:C7:DB:EA:56:D0:B2:BA:AE:D2:57:66:5F:BE:C8:01:6C:D5:C8:92:A2:B8:A0:3B"
+  "notes": "ویڈیو اور آڈیو فہرست بہتر، حروف کی کٹائی ختم، MX جیسا پلیئر (ٹریک، سب ٹائٹل، آواز بڑھانا، حصہ دہرانا)، اور فون کے مطابق گھماؤ۔\n\nSHA-256 (64-bit): 9dce87d17c445d293aad1461cc4814e280df899f55bb46c070012ebf00944ae3\nSHA-256 (32-bit): 0a2f70c44a5deb0b2a7d5c5a9ad6af9dc4cc3154c14193cd140c532e27402134\nSigning certificate SHA-256: 8E:AD:25:54:69:3B:D8:29:CB:C7:DB:EA:56:D0:B2:BA:AE:D2:57:66:5F:BE:C8:01:6C:D5:C8:92:A2:B8:A0:3B"
 }
