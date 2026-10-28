@@ -1,8 +1,8 @@
 {
-  "versionCode": 34,
-  "versionName": "3.0.8",
+  "versionCode": 35,
+  "versionName": "3.0.9",
   "apk": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader.apk",
   "apk32": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader-32bit.apk",
   "pc": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader-PC-Setup.exe",
-  "notes": "ڈاؤنلوڈ تیز: پہلے سیدھا تیز طریقہ، شروع میں سست روی ختم؛ فیصد اب سچا۔\nنعت/نظم اور گانے میں فرق: ساز (ستار، رباب، ڈھول، باجے) سے پہچان؛ نعت نہیں رکتی۔\nروک کے بعد کوئی دوبارہ کوشش نہیں، لنک صاف۔\nانگریزی زبان: ترتیبات سے اردو یا English چنیں (فون اور پی سی)۔\nپی سی (Windows) ایپ: وہی خصوصیات، انسٹالر اور پورٹیبل فائل۔\nفائلوں کی ونڈو میں ترتیب کا چھوٹا آئیکن، آڈیو/ویڈیو ختم ہونے کے بعد دوبارہ پلے، لنک خود صاف۔\nہر ویڈیو کی آواز شروع ہی میں پرکھی جاتی ہے، روک کا پیغام آتے ہی ڈاؤنلوڈ رک جاتا ہے۔\nویڈیو/آڈیو دیکھیں کی فہرست ایپ کھلتے ہی تیار، نیٹ ورک نشان، لازمی اپ ڈیٹ برائے بہت پرانے ورژن۔\n\nSHA-256 (64-bit): e6de2a8332b5a928de05855102b0771700fbf242c8f1d8ac686cb6eee3c2117e\nSHA-256 (32-bit): d8729f793098294a0abce8c36700e1448bb30f979c1a28a3806716b8b66ecdce\nSigning certificate SHA-256: 8E:AD:25:54:69:3B:D8:29:CB:C7:DB:EA:56:D0:B2:BA:AE:D2:57:66:5F:BE:C8:01:6C:D5:C8:92:A2:B8:A0:3B"
+  "notes": "ڈاؤنلوڈ کی رفتار تیز کر دی گئی: پہلے سیدھا تیز طریقہ، شروع کی سستی ختم، فیصد سچا۔\nنعت/نظم اور گانے میں فرق: ستار، رباب، ڈھول، باجوں سے گانا پہچانا جاتا ہے، نعت نہیں رکتی۔\nمواد کی جانچ کا جملہ شروع میں ہی دکھتا ہے۔\nیوٹیوب بوٹ تصدیق مانگے تو ایپ خود دوسرے راستے آزماتی ہے۔\nاپ ڈیٹ ونڈو میں بٹن ہمیشہ نظر آتے ہیں، لمبی تفصیل سکرول ہوتی ہے۔\nانگریزی زبان، پی سی ایپ، فائلوں کی ترتیب کا آئیکن، دوبارہ پلے، روک کے بعد لنک خود صاف۔\n\nSHA-256 (64-bit): 80eeb1d79138242d2021a5365c76c047fa9e7ceffa2424c0a951812c9cd3e8d7\nSHA-256 (32-bit): 03beb27f860edcd0fd0499ae68b811db21b9171c469fe7526576113f33707f78\nSigning certificate SHA-256: 8E:AD:25:54:69:3B:D8:29:CB:C7:DB:EA:56:D0:B2:BA:AE:D2:57:66:5F:BE:C8:01:6C:D5:C8:92:A2:B8:A0:3B"
 }
