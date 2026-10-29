@@ -1,8 +1,8 @@
 {
-  "versionCode": 39,
-  "versionName": "3.0.13",
+  "versionCode": 40,
+  "versionName": "3.0.14",
   "apk": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader.apk",
   "apk32": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader-32bit.apk",
   "pc": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader-PC-Setup.exe",
-  "notes": "تیز ڈاؤنلوڈنگ\nویڈیو / آڈیو کوالٹیز میں تبدیلی\nبہتری: کیلکولیٹر میں پورا حساب اور سائنٹفک آپشن\nخرابیوں کی درستی\n\nSHA-256 (64-bit): af265ea40df13a96ad1d73e9309744e5157bdb6e48e12594cb7d2cbcd9c40701\nSHA-256 (32-bit): fc108c8e9c4b584fb3acf0a979d0ad7a6a5fa781a78d4e030f6302b116eca657\nSigning certificate SHA-256: 8E:AD:25:54:69:3B:D8:29:CB:C7:DB:EA:56:D0:B2:BA:AE:D2:57:66:5F:BE:C8:01:6C:D5:C8:92:A2:B8:A0:3B"
+  "notes": "تیز ڈاؤنلوڈنگ\nویڈیو / آڈیو کوالٹیز میں تبدیلی\nبہتری: کیلکولیٹر میں پورا حساب اور سائنٹفک آپشن\nخرابیوں کی درستی\n\nSHA-256 (64-bit): 3811311d66570365bc5d1b85e83a04537ac580f9ad015730a1c3ec66d95ca0cd\nSHA-256 (32-bit): 72dc5c83c302905a42360dfb0468322233aed6eec3e955c225b845b0b31e7213\nSigning certificate SHA-256: 8E:AD:25:54:69:3B:D8:29:CB:C7:DB:EA:56:D0:B2:BA:AE:D2:57:66:5F:BE:C8:01:6C:D5:C8:92:A2:B8:A0:3B"
 }
