@@ -1,8 +1,8 @@
 {
-  "versionCode": 42,
-  "versionName": "3.0.16",
+  "versionCode": 43,
+  "versionName": "3.0.17",
   "apk": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader.apk",
   "apk32": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader-32bit.apk",
   "pc": "https://github.com/salmanabbasinm-hash/abbasi-updates/releases/latest/download/AbbasiAllDownloader-PC-Setup.exe",
-  "notes": "تیز ڈاؤنلوڈنگ\nویڈیو / آڈیو کوالٹیز میں تبدیلی\nبہتری: کیلکولیٹر میں پورا حساب اور سائنٹفک آپشن\nفیس بک ویڈیوز کی خرابی درست\nخرابیوں کی درستی\n\nSHA-256 (64-bit): f40baa80aa10ba7a82ec913de2511a72ec47b57be581d1861979ee4a1f269edf\nSHA-256 (32-bit): d4a0f08e3674682dfa12ed7f6c660dbc51301bd0731523615a32eb4bb47f1260\nSigning certificate SHA-256: 8E:AD:25:54:69:3B:D8:29:CB:C7:DB:EA:56:D0:B2:BA:AE:D2:57:66:5F:BE:C8:01:6C:D5:C8:92:A2:B8:A0:3B"
+  "notes": "نیٹ ٹوٹنے پر انتظار اور وہیں سے جاری\nپلے لسٹ اور چینل: نشان لگا کر ڈاؤنلوڈ\nانسٹاگرام کی عام ریلز اور پوسٹیں\nاختیاری سہولتیں: سب ٹائٹل، ویڈیو کا حصہ، مقررہ وقت\nپشتو اور سندھی زبان\nناکامی کی وجہ آسان لفظوں میں\n\nSHA-256 (64-bit): 70cddb8f5861a2b811b9f47f105c2eef4a2b079372165109ce56e40c04af0506\nSHA-256 (32-bit): 724cdd1f0860001b069759db2422e38d56f840d8e523c00b7f7c78076b66ba6b\nSigning certificate SHA-256: 8E:AD:25:54:69:3B:D8:29:CB:C7:DB:EA:56:D0:B2:BA:AE:D2:57:66:5F:BE:C8:01:6C:D5:C8:92:A2:B8:A0:3B"
 }
