@@ -1,0 +1,139 @@
+name: Build keyboard
+
+on:
+  workflow_dispatch:
+  push:
+
+permissions:
+  contents: write
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # The zip is uploaded as it is; unpack it here.
+      - name: Unpack zip
+        run: |
+          if [ -f abbasi-keyboard.zip ]; then
+            rm -rf unpacked
+            unzip -o -q abbasi-keyboard.zip -d unpacked
+          fi
+
+      # Finds the android project wherever the upload put it.
+      - name: Locate android project
+        id: loc
+        run: |
+          ROOT=.
+          if [ -d unpacked ]; then ROOT=unpacked; fi
+          S=$(find "$ROOT" -type f -name settings.gradle.kts | head -1)
+          if [ -z "$S" ]; then
+            echo "ERROR: settings.gradle.kts not found. Files in the repository:"
+            find . -maxdepth 3 -not -path './.git/*' | head -60
+            exit 1
+          fi
+          D=$(dirname "$S")
+          printf 'android.useAndroidX=true\norg.gradle.jvmargs=-Xmx3g -Dfile.encoding=UTF-8\n' > "$D/gradle.properties"
+          echo "dir=$D" >> "$GITHUB_OUTPUT"
+          echo "Android project is in $D"
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.10.2"
+
+      # The Jameel Noori Nastaleeq font lives in the public update repo; it is put into the app here.
+      - name: Fetch the Nastaleeq font
+        working-directory: ${{ steps.loc.outputs.dir }}
+        continue-on-error: true
+        run: |
+          mkdir -p app/src/main/assets/fonts
+          curl -fsSL --retry 3 -o app/src/main/assets/fonts/JameelNooriNastaleeq.ttf \
+            "https://raw.githubusercontent.com/salmanabbasinm-hash/abbasi-updates/main/Jameel_Noori_Nastaleeq_Regular.ttf" || true
+          curl -fsSL --retry 3 -o app/src/main/assets/fonts/JameelNooriNastaleeqKasheeda.ttf \
+            "https://raw.githubusercontent.com/salmanabbasinm-hash/abbasi-updates/main/Jameel_Noori_Nastaleeq_Kasheeda.ttf" || true
+          curl -fsSL --retry 3 -o app/src/main/assets/fonts/PashtoNastaleeq.ttf \
+            "https://raw.githubusercontent.com/salmanabbasinm-hash/abbasi-updates/main/Pashto_Nastaleeq.ttf" || true
+          for F in app/src/main/assets/fonts/JameelNooriNastaleeq.ttf app/src/main/assets/fonts/JameelNooriNastaleeqKasheeda.ttf app/src/main/assets/fonts/PashtoNastaleeq.ttf; do
+            if [ -f "$F" ] && [ "$(stat -c %s "$F")" -lt 50000 ]; then rm -f "$F"; fi
+          done
+          ls -la app/src/main/assets/fonts || true
+
+      - name: Build debug APK
+        working-directory: ${{ steps.loc.outputs.dir }}
+        shell: bash
+        run: |
+          set +e
+          gradle assembleDebug --console=plain > build.log 2>&1
+          rc=$?
+          if [ $rc -ne 0 ]; then
+            echo "=================== COMPILE ERRORS ==================="
+            grep -E "^e: |error:|What went wrong" -A3 build.log | head -60
+            echo "=================== END ERRORS ==================="
+            echo "### Kotlin errors" >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            grep -E "^e: " build.log | head -40 >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          fi
+          exit $rc
+
+      # The finished file goes to the Release, so the stored copy is kept for one day only and may fail without stopping the build.
+      - uses: actions/upload-artifact@v4
+        continue-on-error: true
+        with:
+          retention-days: 1
+          name: AbbasiKeyboard-apk
+          path: ${{ steps.loc.outputs.dir }}/app/build/outputs/apk/debug/*.apk
+
+      # One place to download from: the Releases page of this repository.
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ADIR: ${{ steps.loc.outputs.dir }}
+        run: |
+          VN=$(grep -oP 'versionName = "\K[^"]+' "$ADIR/app/build.gradle.kts")
+          NOTES="Abbasi Keyboard $VN"
+          N=$(find . -name release-notes.txt -not -path './.git/*' | head -1)
+          if [ -n "$N" ]; then NOTES=$(cat "$N"); fi
+          cp "$ADIR/app/build/outputs/apk/debug/app-debug.apk" AbbasiKeyboard.apk
+          H=$(sha256sum AbbasiKeyboard.apk | cut -d' ' -f1)
+          NOTES=$(printf '%s\n\nSHA-256: %s' "$NOTES" "$H")
+          if gh release view "v$VN" >/dev/null 2>&1; then
+            gh release delete "v$VN" --cleanup-tag -y
+          fi
+          gh release create "v$VN" AbbasiKeyboard.apk --title "Abbasi Keyboard $VN" --notes "$NOTES" --target "${GITHUB_SHA}"
+          echo "$VN" > /tmp/vn; echo "$NOTES" > /tmp/notes.txt; cp AbbasiKeyboard.apk /tmp/kb.apk
+          VC=$(grep -oP 'versionCode = \K[0-9]+' "$ADIR/app/build.gradle.kts")
+          echo "$VC" > /tmp/vc
+
+      - name: Publish update to abbasi-updates
+        env:
+          UPDATE_TOKEN: ${{ secrets.UPDATE_TOKEN }}
+        run: |
+          if [ -z "$UPDATE_TOKEN" ]; then
+            echo "### WARNING: UPDATE_TOKEN secret missing - in-app update NOT published" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          VN=$(cat /tmp/vn); VC=$(cat /tmp/vc)
+          export GH_TOKEN="$UPDATE_TOKEN"
+          R=salmanabbasinm-hash/abbasi-updates
+          NOTES=$(sed '/^$/,$d' /tmp/notes.txt)
+          gh release delete "kb-v$VN" -R $R --cleanup-tag -y 2>/dev/null || true
+          gh release create "kb-v$VN" /tmp/kb.apk#AbbasiKeyboard.apk -R $R --title "Abbasi Keyboard $VN" --notes "$NOTES" --latest=false
+          APK="https://github.com/$R/releases/download/kb-v$VN/AbbasiKeyboard.apk"
+          python3 - "$VC" "$VN" "$APK" "$NOTES" > keyboard.json <<'PY'
+          import json,sys
+          print(json.dumps({"versionCode":int(sys.argv[1]),"versionName":sys.argv[2],"apk":sys.argv[3],"notes":sys.argv[4]},ensure_ascii=False))
+          PY
+          B64=$(base64 -w0 keyboard.json)
+          SHA=$(gh api repos/$R/contents/keyboard.json --jq .sha 2>/dev/null || true)
+          if [ -n "$SHA" ]; then
+            gh api -X PUT repos/$R/contents/keyboard.json -f message="keyboard $VN" -f content="$B64" -f sha="$SHA"
+          else
+            gh api -X PUT repos/$R/contents/keyboard.json -f message="keyboard $VN" -f content="$B64"
+          fi
+          echo "### Keyboard update published: $VN (code $VC)" >> "$GITHUB_STEP_SUMMARY"
